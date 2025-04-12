@@ -28,11 +28,11 @@ targets = 4042bcee.signing_policy \
           aa76c4ab.signing_policy 93120419.signing_policy \
           4260b799.signing_policy 27794265.signing_policy \
           137e9a94.signing_policy 36f5bce7.signing_policy \
+          0b9bc432.0 8794b4e3.0 \
           4042bcee.0 \
           6187b673.0 8d33f237.0 \
           9f194ecd.0 \
           dec71a0b.0 dd7d39a7.0 \
-          8d33f237.0 dec71a0b.0 \
           462422cf.0 bae39ced.0 \
           9aad238c.0 f7679d31.0 \
           aa578057.0 09e5bea5.0 \
