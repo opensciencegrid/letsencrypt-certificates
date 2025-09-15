@@ -14,8 +14,6 @@ sources = isrgrootx1.signing_policy \
 targets = 4042bcee.signing_policy \
           6187b673.signing_policy \
           0b9bc432.signing_policy 8794b4e3.signing_policy \
-          8d33f237.signing_policy dec71a0b.signing_policy \
-          9f194ecd.signing_policy dd7d39a7.signing_policy \
           462422cf.signing_policy bae39ced.signing_policy \
           9aad238c.signing_policy f7679d31.signing_policy \
           aa578057.signing_policy 09e5bea5.signing_policy \
@@ -27,10 +25,7 @@ targets = 4042bcee.signing_policy \
           4260b799.signing_policy 27794265.signing_policy \
           137e9a94.signing_policy 36f5bce7.signing_policy \
           4042bcee.0 \
-          6187b673.0 8d33f237.0 \
-          9f194ecd.0 \
-          dec71a0b.0 dd7d39a7.0 \
-          8d33f237.0 dec71a0b.0 \
+          6187b673.0 \
           462422cf.0 bae39ced.0 \
           9aad238c.0 f7679d31.0 \
           aa578057.0 09e5bea5.0 \
