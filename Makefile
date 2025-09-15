@@ -1,6 +1,5 @@
 sources = isrgrootx1.signing_policy \
           isrg-root-x2.signing_policy \
-          lets-encrypt-r3.signing_policy \
           lets-encrypt-r4.signing_policy \
           lets-encrypt-e5.signing_policy \
           lets-encrypt-e6.signing_policy \
@@ -45,7 +44,7 @@ targets = 4042bcee.signing_policy \
           137e9a94.0 36f5bce7.0 \
           isrgrootx1.pem \
           isrg-root-x2.pem \
-          lets-encrypt-r3.pem lets-encrypt-r4.pem \
+          lets-encrypt-r4.pem \
           lets-encrypt-e5.pem \
           lets-encrypt-e6.pem \
           lets-encrypt-r10.pem \
@@ -77,7 +76,6 @@ clean :
 check : all
 	openssl verify -CApath . isrgrootx1.pem
 	openssl verify -CApath . isrg-root-x2.pem
-	openssl verify -CApath . lets-encrypt-r3.pem
 	openssl verify -CApath . lets-encrypt-r4.pem
 	openssl verify -CApath . lets-encrypt-e5.pem
 	openssl verify -CApath . lets-encrypt-e6.pem
@@ -99,12 +97,8 @@ check : all
 
 0b9bc432.signing_policy 8794b4e3.signing_policy : isrg-root-x2.signing_policy
 	$(LINK) $< $@
-8d33f237.signing_policy : lets-encrypt-r3.signing_policy
-	$(LINK) lets-encrypt-r3.signing_policy 8d33f237.signing_policy
 9f194ecd.signing_policy : lets-encrypt-r4.signing_policy
 	$(LINK) lets-encrypt-r4.signing_policy 9f194ecd.signing_policy
-dec71a0b.signing_policy : lets-encrypt-r3.signing_policy
-	$(LINK) lets-encrypt-r3.signing_policy dec71a0b.signing_policy
 dd7d39a7.signing_policy : lets-encrypt-r4.signing_policy
 	$(LINK) lets-encrypt-r4.signing_policy dd7d39a7.signing_policy
 462422cf.signing_policy bae39ced.signing_policy : lets-encrypt-e5.signing_policy
@@ -134,12 +128,8 @@ aa76c4ab.signing_policy 93120419.signing_policy : lets-encrypt-r12.signing_polic
 	$(LINK) isrgrootx1.pem 6187b673.0
 0b9bc432.0 8794b4e3.0 : isrg-root-x2.pem
 	$(LINK) $< $@
-8d33f237.0 : lets-encrypt-r3.pem
-	$(LINK) lets-encrypt-r3.pem 8d33f237.0
 9f194ecd.0 : lets-encrypt-r4.pem
 	$(LINK) lets-encrypt-r4.pem 9f194ecd.0
-dec71a0b.0 : lets-encrypt-r3.pem
-	$(LINK) lets-encrypt-r3.pem dec71a0b.0
 dd7d39a7.0 : lets-encrypt-r4.pem
 	$(LINK) lets-encrypt-r4.pem dd7d39a7.0
 462422cf.0 bae39ced.0 : lets-encrypt-e5.pem
@@ -168,8 +158,6 @@ isrgrootx1.pem :
 	$(GET) https://letsencrypt.org/certs/isrgrootx1.pem
 isrg-root-x2.pem :
 	$(GET) https://letsencrypt.org/certs/isrg-root-x2.pem
-lets-encrypt-r3.pem :
-	$(GET) https://letsencrypt.org/certs/lets-encrypt-r3.pem
 lets-encrypt-r4.pem :
 	$(GET) https://letsencrypt.org/certs/lets-encrypt-r4.pem
 lets-encrypt-e5.pem :
